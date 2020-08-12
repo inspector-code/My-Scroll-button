@@ -1,0 +1,62 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.section {
+    height: 2000px;
+}
+
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    color: #dcdcdc;
+    cursor: pointer;
+    visibility: hidden;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px #dcdcdc;
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateY(25px);
+}
+
+.scroll-up::before {
+    content: '⇧';
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+    line-height: 0;
+}
+
+.scroll-up:hover {
+    color: #156262;
+}
+
+.scroll-up--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-up__svg-path {
+    box-sizing: border-box;
+    fill: none;
+    stroke: #156262;
+    stroke-width: 4px;
+    transition: .2s;
+}
