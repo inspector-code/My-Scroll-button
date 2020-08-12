@@ -29,20 +29,6 @@ body {
     transform: translateY(25px);
 }
 
-.scroll-up::before {
-    content: '⇧';
-    top: 0;
-    left: 0;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: 25px;
-    line-height: 0;
-}
-
 .scroll-up:hover {
     color: #156262;
 }
@@ -53,10 +39,28 @@ body {
     transform: translateY(0);
 }
 
-.scroll-up__svg-path {
+.scroll-up__up__circle-svg-path {
     box-sizing: border-box;
     fill: none;
     stroke: #156262;
     stroke-width: 4px;
     transition: .2s;
+}
+
+.scroll-up__arrow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-up__arrow path {
+    fill: #156262;
+    transition: .2s;
+}
+
+.scroll-up__arrow:hover path {
+    fill: #0f4444;
 }
